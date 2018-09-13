@@ -27,37 +27,42 @@ namespace MVCComic.Data
                 Favorite = false
             },
         new ComicBook()
-        {
-            Id = 2,
-            SeriesTitle = "The Amazing Spider-Man",
-            IssueNumber = 657,
-            DescriptionHtml = "<p><strong>FF: THREE TIE-IN.</strong> Spider-Man visits the FF for a very private wake--just for family.</p>",
-            Artists = new Artist[]
             {
-                new Artist() { Name = "Dan Slott", Role = "Script" },
-                new Artist() { Name = "Marcos Martin", Role = "Pencils" },
-                new Artist() { Name = "Marcos Martin", Role = "Inks" },
-                new Artist() { Name = "Muntsa Vicente", Role = "Colors" },
-                new Artist() { Name = "Joe Caramagna", Role = "Letters" }
+                Id = 2,
+                SeriesTitle = "The Amazing Spider-Man",
+                IssueNumber = 657,
+                DescriptionHtml = "<p><strong>FF: THREE TIE-IN.</strong> Spider-Man visits the FF for a very private wake--just for family.</p>",
+                Artists = new Artist[]
+                {
+                    new Artist() { Name = "Dan Slott", Role = "Script" },
+                    new Artist() { Name = "Marcos Martin", Role = "Pencils" },
+                    new Artist() { Name = "Marcos Martin", Role = "Inks" },
+                    new Artist() { Name = "Muntsa Vicente", Role = "Colors" },
+                    new Artist() { Name = "Joe Caramagna", Role = "Letters" }
+                },
+                Favorite = false
             },
-            Favorite = false
-        },
         new ComicBook()
-        {
-            Id = 3,
-            SeriesTitle = "Bone",
-            IssueNumber = 50,
-            DescriptionHtml = "<p><strong>The Dungeon & The Parapet, Part 1.</strong> Thorn is discovered by Lord Tarsil and the corrupted Stickeaters and thrown into a dungeon with Fone Bone. As she sleeps, a message comes to her about the mysterious \"Crown of Horns\".</p>",
-            Artists = new Artist[]
             {
-                new Artist() { Name = "Jeff Smith", Role = "Script" },
-                new Artist() { Name = "Jeff Smith", Role = "Pencils" },
-                new Artist() { Name = "Jeff Smith", Role = "Inks" },
-                new Artist() { Name = "Jeff Smith", Role = "Letters" }
-            },
-            Favorite = false
+                Id = 3,
+                SeriesTitle = "Bone",
+                IssueNumber = 50,
+                DescriptionHtml = "<p><strong>The Dungeon & The Parapet, Part 1.</strong> Thorn is discovered by Lord Tarsil and the corrupted Stickeaters and thrown into a dungeon with Fone Bone. As she sleeps, a message comes to her about the mysterious \"Crown of Horns\".</p>",
+                Artists = new Artist[]
+                {
+                    new Artist() { Name = "Jeff Smith", Role = "Script" },
+                    new Artist() { Name = "Jeff Smith", Role = "Pencils" },
+                    new Artist() { Name = "Jeff Smith", Role = "Inks" },
+                    new Artist() { Name = "Jeff Smith", Role = "Letters" }
+                },
+                Favorite = false
+            }
+        };
+
+        public ComicBook[] GetComicBooks()
+        {
+            return _comicBooks;
         }
-    };
 
         public ComicBook GetComicBook(int id)
         {
